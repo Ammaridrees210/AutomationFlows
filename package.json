@@ -1,0 +1,22 @@
+{
+  "name": "ot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "pw:Codegen":"npx playwright codegen",
+    "pw:debug":"npx playwright test --debug",
+    "test":"npx playwright test",
+    "pw:Project:chromium":"npx playwright test --project=chromium",
+    "pw:ui":"npx playwright test --ui",
+    "pw:report":"npx playwright show-report",
+    "pw:headed":"npx playwright test --headed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.42.1",
+    "@types/node": "^20.12.2"
+  }
+}
