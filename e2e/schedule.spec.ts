@@ -28,6 +28,5 @@ test.describe('Schedule and dispatch a job in OT', () => {
         await page.fill(scheduleSelector.clickOnCrewBoxeFilter(), data.name);
         await page.click(scheduleSelector.SearchedCrewMemeberByName());
         await page.click(scheduleSelector.clickOnDispatchNow());
-        await page.pause()
     });
 });
