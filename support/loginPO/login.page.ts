@@ -6,8 +6,8 @@ export const loginSelectors = {
     passwordPlaceholderSelector: () => { return '[placeholder="Your password"]'},
     loginButtonSelector: () => { return 'span:has-text("LOGIN")'},
     userAccountDropdownSelector: () => { return 'i[class="far fa-user-circle"]'},
-    navBarprofileIconSelector: () => { return '[class="far fa-user-circle"]'},
-    activeUserNameEmailverifySelector: () =>{ return 'a[title="Profile"] strong'},
+    navBarProfileIconSelector: () => { return '[class="far fa-user-circle"]'},
+    activeUserNameEmailVerifySelector: () =>{ return 'a[title="Profile"] strong'},
     logoutCurrentUserAccount: () => { return 'a[title="LogOut"]'},
     wrongCredentialAlterMassage: () => { return 'span[class="ng-star-inserted"]'},
     ForgetPasswordHyperlink: () => { return 'a[class="pull-left"]'},
@@ -19,7 +19,7 @@ export const loginSelectors = {
     clickOnLoginHyperLinkSelector: () => { return 'a:has-text("Login")'}
 }
 
-export async function login(email: any, password: any, page: any) {
+export async function login(email: any, password: any, page: Page) {
     await expect(loginSelectors.loginPageVerificationSelector(page)).toBeVisible();
     await page.fill(loginSelectors.emailPlaceholderSelector(), email);
     await page.fill(loginSelectors.passwordPlaceholderSelector(), password);
@@ -27,7 +27,7 @@ export async function login(email: any, password: any, page: any) {
 }
 
 export async function logout(page: Page) {
-    await page.click(loginSelectors.navBarprofileIconSelector());
+    await page.click(loginSelectors.navBarProfileIconSelector());
     await page.click(loginSelectors.logoutCurrentUserAccount());
 }
 
