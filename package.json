@@ -4,13 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "pw:Codegen": "npx playwright codegen",
-    "pw:debug": "npx playwright test --debug",
+    "test:Codegen": "npx playwright codegen",
+    "test:debug": "npx playwright test --debug",
     "test": "npx playwright test",
-    "pw:Project:chromium": "npx playwright test --project=chromium",
-    "pw:ui": "npx playwright test --ui",
-    "pw:report": "npx playwright show-report",
-    "pw:headed": "npx playwright test --headed"
+    "test:Project:chromium": "npx playwright test --project=chromium",
+    "test:ui": "npx playwright test --ui",
+    "test:report": "npx playwright show-report",
+    "test:headed": "npx playwright test --headed --workers=1"
   },
   "keywords": [],
   "author": "",
